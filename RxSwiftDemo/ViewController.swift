@@ -73,6 +73,12 @@ class ViewController: UIViewController {
         }).addDisposableTo(disposeBag)
         
     }
+    
+    @IBAction func loginAction(_ sender: Any) {
+        let loginViewController = LoginViewController()
+//        present(loginViewController, animated: true, completion: nil)
+        navigationController?.pushViewController(loginViewController, animated: true)
+    }
 
     func showAlert(message: String) {
         let action = UIAlertAction(title: "确定", style: .default, handler: nil)

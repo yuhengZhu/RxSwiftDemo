@@ -98,4 +98,50 @@ class ValidationService {
         
         return .failed(message: "两次密码不一样")
     }
+    
+    func loginUsernameValid(_ username: String) -> Observable<Result> {
+        
+        if username.characters.count == 0 {
+            
+            return Observable.just(Result.empty)
+        }
+        
+        if usernameVaild(username) {
+            return Observable.just(Result.ok(message: "用户名可用"))
+        }
+        
+        return Observable.just(Result.failed(message: "用户名不存在"))
+    }
+    
+    func login(_ username: String, password: String) -> Observable<Result> {
+        let filePath = NSHomeDirectory() + "/Documents/users.plist"
+        let userDic = NSDictionary(contentsOfFile: filePath)
+        if let userPass = userDic?.object(forKey: username) as? String {
+            
+            if userPass == password {
+                return Observable.just(Result.ok(message: "登录成功"))
+            }
+        }
+        return Observable.just(Result.failed(message: "密码错误"))
+    }
+}
+
+class SearchService {
+    
+    static let shareInstance = SearchService()
+
+    private init() {}
+    
+    func getThings(withName name: String) -> Observable<[Thing]> {
+        let thingsString = Bundle.main.path(forResource: "things", ofType: "plist")
+        let thingsArray = NSArray(contentsOfFile: thingsString!) as! Array<[String: String]>
+        var things = [Thing]()
+        for thingDict in thingsArray {
+            if thingDict["name"]!.contains(name) {
+                let thing = Thing(name: thingDict["name"]!, desc: thingDict["intro"]!, icon: thingDict["icon"]!)
+                things.append(thing)
+            }
+        }
+        return Observable.just(things).observeOn(MainScheduler.instance)
+    }
 }
