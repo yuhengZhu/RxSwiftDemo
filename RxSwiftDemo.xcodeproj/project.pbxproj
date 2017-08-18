@@ -11,6 +11,13 @@
 		584C269F1F453638004719C2 /* ContainerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 584C269E1F453638004719C2 /* ContainerViewModel.swift */; };
 		584C26A11F4536A0004719C2 /* Thing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 584C26A01F4536A0004719C2 /* Thing.swift */; };
 		584C26E81F458F41004719C2 /* things.plist in Resources */ = {isa = PBXBuildFile; fileRef = 584C26E71F458F41004719C2 /* things.plist */; };
+		584C26EC1F46B521004719C2 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 584C26E91F46B521004719C2 /* Alamofire.framework */; };
+		584C26EE1F46B521004719C2 /* Result.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 584C26EB1F46B521004719C2 /* Result.framework */; };
+		584C26F01F46BA4B004719C2 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 584C26EF1F46BA4B004719C2 /* DetailViewController.swift */; };
+		584DC8601F46BDC200B24F62 /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 584DC85F1F46BDC200B24F62 /* APIManager.swift */; };
+		584DC8621F46C6C600B24F62 /* Moya.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 584DC8611F46C6C600B24F62 /* Moya.framework */; };
+		584DC8641F46DBFF00B24F62 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 584DC8631F46DBFF00B24F62 /* Post.swift */; };
+		584DC8661F46DC0F00B24F62 /* ObjectMapper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 584DC8651F46DC0F00B24F62 /* ObjectMapper.framework */; };
 		58580C721F4423E0005E60B8 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58580C711F4423E0005E60B8 /* LoginViewController.swift */; };
 		58580C741F4423F5005E60B8 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58580C731F4423F5005E60B8 /* LoginViewModel.swift */; };
 		587750511F3D844D005896E9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 587750501F3D844D005896E9 /* AppDelegate.swift */; };
@@ -26,6 +33,7 @@
 		58AEA9381F3D94DF0002F2C9 /* Pods_RxSwiftDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 58AEA9351F3D94DF0002F2C9 /* Pods_RxSwiftDemo.framework */; };
 		58AEA97F1F3D99350002F2C9 /* RxCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 58AEA97D1F3D99350002F2C9 /* RxCocoa.framework */; };
 		58AEA9801F3D99350002F2C9 /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 58AEA97E1F3D99350002F2C9 /* RxSwift.framework */; };
+		B25EFF8D5B179F569A3E6991 /* Pods_RxSwiftDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6774123FFD7E80AD36F12F44 /* Pods_RxSwiftDemo.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,6 +71,14 @@
 		584C269E1F453638004719C2 /* ContainerViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContainerViewModel.swift; sourceTree = "<group>"; };
 		584C26A01F4536A0004719C2 /* Thing.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Thing.swift; sourceTree = "<group>"; };
 		584C26E71F458F41004719C2 /* things.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = things.plist; sourceTree = "<group>"; };
+		584C26E91F46B521004719C2 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = "../../Library/Developer/Xcode/DerivedData/RxSwiftDemo-bhafibmynkkerngffynduuurdsoq/Build/Products/Debug-iphonesimulator/Alamofire/Alamofire.framework"; sourceTree = "<group>"; };
+		584C26EA1F46B521004719C2 /* Moya.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Moya.framework; path = "Pods/../build/Debug-iphoneos/Moya/Moya.framework"; sourceTree = "<group>"; };
+		584C26EB1F46B521004719C2 /* Result.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Result.framework; path = "../../Library/Developer/Xcode/DerivedData/RxSwiftDemo-bhafibmynkkerngffynduuurdsoq/Build/Products/Debug-iphonesimulator/Result/Result.framework"; sourceTree = "<group>"; };
+		584C26EF1F46BA4B004719C2 /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		584DC85F1F46BDC200B24F62 /* APIManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
+		584DC8611F46C6C600B24F62 /* Moya.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Moya.framework; path = "Pods/../build/Debug-iphoneos/Moya.framework"; sourceTree = "<group>"; };
+		584DC8631F46DBFF00B24F62 /* Post.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
+		584DC8651F46DC0F00B24F62 /* ObjectMapper.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ObjectMapper.framework; path = "../../Library/Developer/Xcode/DerivedData/RxSwiftDemo-bhafibmynkkerngffynduuurdsoq/Build/Products/Debug-iphonesimulator/ObjectMapper/ObjectMapper.framework"; sourceTree = "<group>"; };
 		58580C711F4423E0005E60B8 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		58580C731F4423F5005E60B8 /* LoginViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 		5877504D1F3D844D005896E9 /* RxSwiftDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RxSwiftDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -98,9 +114,14 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				584DC8661F46DC0F00B24F62 /* ObjectMapper.framework in Frameworks */,
+				584DC8621F46C6C600B24F62 /* Moya.framework in Frameworks */,
+				584C26EC1F46B521004719C2 /* Alamofire.framework in Frameworks */,
+				584C26EE1F46B521004719C2 /* Result.framework in Frameworks */,
 				58AEA97F1F3D99350002F2C9 /* RxCocoa.framework in Frameworks */,
 				58AEA9801F3D99350002F2C9 /* RxSwift.framework in Frameworks */,
 				58AEA9381F3D94DF0002F2C9 /* Pods_RxSwiftDemo.framework in Frameworks */,
+				B25EFF8D5B179F569A3E6991 /* Pods_RxSwiftDemo.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -124,6 +145,11 @@
 		495F0B64EDABA23237766996 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				584DC8651F46DC0F00B24F62 /* ObjectMapper.framework */,
+				584DC8611F46C6C600B24F62 /* Moya.framework */,
+				584C26E91F46B521004719C2 /* Alamofire.framework */,
+				584C26EA1F46B521004719C2 /* Moya.framework */,
+				584C26EB1F46B521004719C2 /* Result.framework */,
 				58AEA97D1F3D99350002F2C9 /* RxCocoa.framework */,
 				58AEA97E1F3D99350002F2C9 /* RxSwift.framework */,
 				58AEA9351F3D94DF0002F2C9 /* Pods_RxSwiftDemo.framework */,
@@ -176,6 +202,9 @@
 				584C269C1F453619004719C2 /* ContainerViewController.swift */,
 				584C269E1F453638004719C2 /* ContainerViewModel.swift */,
 				584C26A01F4536A0004719C2 /* Thing.swift */,
+				584C26EF1F46BA4B004719C2 /* DetailViewController.swift */,
+				584DC85F1F46BDC200B24F62 /* APIManager.swift */,
+				584DC8631F46DBFF00B24F62 /* Post.swift */,
 			);
 			path = RxSwiftDemo;
 			sourceTree = "<group>";
@@ -394,8 +423,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				584DC8601F46BDC200B24F62 /* APIManager.swift in Sources */,
+				584C26F01F46BA4B004719C2 /* DetailViewController.swift in Sources */,
 				58580C721F4423E0005E60B8 /* LoginViewController.swift in Sources */,
 				587750531F3D844D005896E9 /* ViewController.swift in Sources */,
+				584DC8641F46DBFF00B24F62 /* Post.swift in Sources */,
 				584C269D1F453619004719C2 /* ContainerViewController.swift in Sources */,
 				5877507F1F3D865A005896E9 /* RegisterViewModel.swift in Sources */,
 				587750831F3D8684005896E9 /* Service.swift in Sources */,
@@ -561,6 +593,8 @@
 					"$(PROJECT_DIR)/build/Debug-iphoneos/RxCocoa",
 					"$(PROJECT_DIR)/build/Debug-iphoneos/RxSwift",
 					"$(PROJECT_DIR)/build/Release-iphoneos",
+					"$(PROJECT_DIR)/build/Debug-iphoneos/Moya",
+					"$(PROJECT_DIR)/build/Debug-iphoneos",
 				);
 				INFOPLIST_FILE = RxSwiftDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -583,6 +617,8 @@
 					"$(PROJECT_DIR)/build/Debug-iphoneos/RxCocoa",
 					"$(PROJECT_DIR)/build/Debug-iphoneos/RxSwift",
 					"$(PROJECT_DIR)/build/Release-iphoneos",
+					"$(PROJECT_DIR)/build/Debug-iphoneos/Moya",
+					"$(PROJECT_DIR)/build/Debug-iphoneos",
 				);
 				INFOPLIST_FILE = RxSwiftDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

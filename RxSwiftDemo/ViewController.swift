@@ -10,7 +10,6 @@ import UIKit
 import RxCocoa
 import RxSwift
 
-
 class ViewController: UIViewController {
 
     @IBOutlet weak var usernameTextField: UITextField!
@@ -75,9 +74,13 @@ class ViewController: UIViewController {
     }
     
     @IBAction func loginAction(_ sender: Any) {
+        /*
         let loginViewController = LoginViewController()
-//        present(loginViewController, animated: true, completion: nil)
         navigationController?.pushViewController(loginViewController, animated: true)
+        */
+        let detailViewController = DetailViewController()
+        navigationController?.pushViewController(detailViewController, animated: true)
+        
     }
 
     func showAlert(message: String) {

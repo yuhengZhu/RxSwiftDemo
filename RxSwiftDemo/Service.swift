@@ -145,3 +145,4 @@ class SearchService {
         return Observable.just(things).observeOn(MainScheduler.instance)
     }
 }
+
