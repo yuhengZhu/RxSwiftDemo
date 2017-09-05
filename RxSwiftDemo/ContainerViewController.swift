@@ -9,8 +9,9 @@
 import UIKit
 import RxSwift
 import RxCocoa
+import RxDataSources
 
-class ContainerViewController: UIViewController {
+class ContainerViewController: UIViewController, UITableViewDelegate {
     
     let cellResuedId: String = "tableViewCell"
     
@@ -25,6 +26,8 @@ class ContainerViewController: UIViewController {
         return searchBar.rx.text.orEmpty.throttle(0.3, scheduler: MainScheduler.instance).distinctUntilChanged()
     }
     
+    let dataSource = RxTableViewSectionedReloadDataSource<SectionModel<String, Post>>()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -37,7 +40,32 @@ class ContainerViewController: UIViewController {
             cell.detailTextLabel?.text = element.desc
             cell.imageView?.image = UIImage(named: element.icon)
         }.addDisposableTo(disposeBag)
- 
+        
+        
+        dataSource.configureCell = { _, tableView, indexPath, user in
+            
+            let cell = tableView.dequeueReusableCell(withIdentifier: self.cellResuedId, for: indexPath) as! TableViewCell
+            cell.tag = indexPath.row
+            return cell
+        }
+        
+        tableView.delegate = self;
+        
+        /* 报错
+        tableView.rx.itemSelected.subscribe(onNext: { indexPath
+            
+            let userListViewController = UserListViewController()
+            navigationController?.pushViewController(userListViewController, animated: true)
+        }, onError: nil, onCompleted: nil, onDisposed: nil).addDisposableTo(disposeBag)
+        */
+        
+        
+        tableView.rx.itemSelected.subscribe(onNext: { [weak self] indexPath in
+            
+            let userListViewController = UserListViewController()
+            self?.navigationController?.pushViewController(userListViewController, animated: true)
+            }, onError: nil, onCompleted: nil, onDisposed: nil).addDisposableTo(disposeBag)
+        
     }
     
     func setupUI() {

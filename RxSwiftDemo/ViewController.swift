@@ -74,13 +74,20 @@ class ViewController: UIViewController {
     }
     
     @IBAction func loginAction(_ sender: Any) {
-        /*
+        
         let loginViewController = LoginViewController()
         navigationController?.pushViewController(loginViewController, animated: true)
-        */
+        
+        
+        /*
         let detailViewController = DetailViewController()
         navigationController?.pushViewController(detailViewController, animated: true)
+        */
         
+        /*
+        let userListViewController = UserListViewController()
+        navigationController?.pushViewController(userListViewController, animated: true)
+        */
     }
 
     func showAlert(message: String) {
