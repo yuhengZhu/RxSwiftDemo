@@ -18,7 +18,5 @@ struct User {
     
     let userName: String
     
-    let userAvat: String
-    
     let age: Int
 }
